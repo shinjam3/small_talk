@@ -1,0 +1,52 @@
+.edit-form {
+	position: relative;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 400px;
+	box-shadow: 0px 0px 10px 1px gray;
+	border-radius: 10px;
+}
+
+.edit-name-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.edit-input {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	width: 90%;
+	height: 30px;
+	border: 1px solid gray;
+}
+
+.edit-input.name {
+	width: 40%;
+}
+
+.edit-button-container {
+	margin: auto;
+	margin-top: 20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	width: 300px;
+}
+
+.st-button.edit {
+	width: 100px;
+	margin-bottom: 20px;
+}
+
+.st-button.hide {
+	display: none;
+}
+
+
+@media only screen and (max-width: 450px) {
+	.edit-form {
+		width: 300px;
+	}
+}

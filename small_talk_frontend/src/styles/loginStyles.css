@@ -1,0 +1,199 @@
+.login-container {
+	background-image: linear-gradient(black, #6600cc);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.login-container.error {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+.login-container.registered {
+	height: 100vh;
+	background-image: linear-gradient(black, #6600cc);
+}
+
+.login-container.registered > h3 {
+	margin-top: 0;
+	color: white;
+	text-align: center;
+	padding: 50px;
+}
+
+.login-logo {
+	width: 600px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px 5px gray;
+	margin: 20px 0px 30px 0px;
+}
+
+
+.login-heading {
+	width: 100%;
+	color: white;
+	font-size: 30px;
+	font-family: impact, serif;
+	text-align: center;
+	margin: 0px 0px 20px 0px;
+}
+
+.login-form {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: gainsboro;
+	border-radius: 20px;
+	margin-bottom: 50px;
+	padding-bottom: 20px;
+}
+
+.login-h2 {
+	width: 100%;
+	margin: 20px;
+}
+
+.login-input {
+	width: 300px;
+	height: 30px;
+	margin: 0px 0px 10px 0px;
+}
+
+.login-accept-div {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	width: 100%;
+}
+
+.login-accept-div > p > span {
+	cursor: pointer;
+}
+
+.login-accept-div > p > span:hover {
+	color: blue;
+}
+
+@media only screen and (min-width: 850px) {
+	.login-container {
+		padding: 30px 0px 30px 0px;
+	}
+}
+
+@media only screen and (max-width: 850px) {	
+	.login-logo {
+		margin: 70px 0px 30px 0px;
+		width: 400px;
+		height: 80px;
+	}
+}
+
+@media only screen and (max-width: 450px) {			
+  .login-logo {
+		margin: 40px 0px 20px 0px;
+		width: 280px;
+		height: 50px;
+	}
+	
+	.login-heading {
+		width: 280px;
+		color: white;
+		font-size: 20px;
+	}
+
+	.login-form {
+		width: 300px;
+	}
+
+	.login-input {
+		width: 220px;
+		height: 25px;
+		margin: 0px 0px 10px 0px;
+	}
+	
+	.login-accept-div { 
+		padding: 0px 35px 0px 35px;
+	}
+}
+
+
+
+/* REGISTER STYLES */
+.register-validation-error {
+	display: none;
+	width: 40vw;
+	margin: 20px 0px 40px 0px;
+	padding: 10px;
+	background-color: ghostwhite;
+	box-shadow: 0px 4px 8px 1px darkgray;
+	border-radius: 10px;
+}
+
+.register-validation-error > p {
+	text-align: center;
+}
+
+.register-validation-error.show {
+	display: block;
+	animation: fade-in 1s;
+}
+
+.register-validation-error.show-edit {
+	display: block;
+	animation: fade-in 1s;
+	margin: auto;
+}
+
+.register-terms {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	top: 50%; /* vertical alignment of fixed element -> top: 50% and transform: translateY(-50%) */
+	left: 50%; /* horizontal alignment of fixed element -> left: 50% and transform: translateX(-50%) */
+	transform: translate(-50%, -50%); /* both alignment of fixed element -> top: 50%; left: 50% and transform: translate(-50%, -50%) */
+	margin: auto;
+	padding: 10px;
+	width: 50vw;
+	background-color: cornsilk;
+	box-shadow: 0px 4px 8px 1px darkgray;
+	border-radius: 10px;
+}
+
+.register-terms.show {
+	display: block;
+	animation: fade-in 0.5s;
+}
+
+.register-terms > p {
+	padding: 0px 10px 0px 10px;
+	font-size: 18px;
+}
+
+.register-terms > button {
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 18px;
+}
+
+@keyframes fade-in {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@media only screen and (max-width: 600px) {	
+	.register-validation-error {
+		width: 85vw;
+	}
+	.register-terms {
+		width: 70vw;
+	}
+}
+/* END REGISTER STYLES */

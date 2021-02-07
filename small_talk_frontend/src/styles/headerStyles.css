@@ -1,0 +1,168 @@
+.header-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-image: linear-gradient(black, #6600cc);
+	height: 125px;
+} 
+
+
+.header-logo {
+	width: 100px;
+	border-radius: 10px;
+	margin-left: 30px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.header-logo:hover {
+	box-shadow: 0px 0px 20px 5px gray;
+}
+
+
+.header-nav-link {
+	font-size: 34px;
+	font-weight: bold;
+	text-decoration: none;
+	color: gray;
+	padding: 30px;
+	text-align: center;
+	height: 100%;
+	transition: 0.3s;
+}
+.header-nav-link:hover {
+	color: white;
+}
+
+
+.header-nav-link.active {
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px red;
+}
+
+
+.header-profile {
+	width: 50px;
+	margin-right: 30px;
+	margin-left: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.header-profile:hover {
+	box-shadow: 0px 0px 20px 5px gray;
+}
+
+
+/* MOBILE STYLES */
+.header-mobile-container {
+	display: none;
+	background-image: linear-gradient(black, #6600cc);
+	width: 100%;	
+	height: 100px;
+	z-index: 2;
+}
+
+
+.header-mobile-open {
+	visibility: hidden;
+	color: white;
+	font-size: 30px;
+	cursor: pointer;
+	margin: 0px 20px 0px 20px;
+}
+
+
+.header-mobile-close {
+	display: none;
+}
+
+
+.header-logo-big {
+	width: 220px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.header-logo-big:hover {
+	box-shadow: 0px 0px 20px 5px gray;
+}
+
+@media only screen and (max-width: 950px) {
+	.header-container {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: block;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+	}
+	
+	.header-container.show {
+		width: 250px;
+	}
+	
+	.header-logo {
+		display: none;
+	}
+	
+	.header-nav-container {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	.header-profile {
+		display: block;
+		margin: auto;
+	}
+	
+	.header-mobile-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.header-mobile-open {
+		visibility: visible;
+	}
+	
+	/* 
+	added a hidden duplicate navigation open button on the right side of mobile nav bar 
+	in order to keep logo centered in the top mobile nav bar
+	*/
+	.header-mobile-open.hide {
+		visibility: hidden;
+	}
+	
+	.header-container.show > .header-mobile-close {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 40px;
+		color: white;
+		cursor: pointer;
+	}
+}
+
+
+@media only screen and (max-width: 400px) {
+	.header-logo {
+		display: block;
+		margin: auto;
+		width: 80px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 20px 5px gray;
+	}
+
+	.header-logo-big {
+		display: none;
+	}
+}

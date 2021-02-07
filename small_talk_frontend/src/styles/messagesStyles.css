@@ -1,0 +1,136 @@
+.messages-container {
+	width: 100%;
+	margin: 40px 0px 40px 0px;
+}
+
+.messages-content {
+	position: relative;
+	background-color: white;
+	border: 1px solid gray;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.messages-content:hover {
+	z-index: 1;
+	box-shadow: 0px 0px 10px 2px gray;
+}
+
+.messages-content-first-half {
+	width: 75%;
+	cursor: pointer;
+}
+
+.messages-content-second-half {
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.messages-half {
+	display: block;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: ghostwhite;
+}
+
+.messages-p {
+	font-size: 18px;
+	padding: 0px 20px 0px 20px;
+}
+
+.messages-p.message {
+	width: 100%;
+	white-space: nowrap; 
+  overflow: hidden;
+	text-overflow: ellipsis; 
+}
+
+.messages-p.members {
+	font-weight: bold;
+	max-width: 250px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.messages-p.date {
+	font-weight: bold;
+}
+
+.messages-icon {
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.messages-icon.hide {
+	display: none;
+}
+
+.messages-warning {
+	display: none;
+}
+
+.messages-warning.show {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 12px;
+}
+
+.messages-warning > p {
+	margin: 0px 0px 5px 0px;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 16px;
+}
+
+.messages-warning > div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.messages-warning > div > button {
+	width: 70px;
+}
+
+@media only screen and (max-width: 730px) {
+	.messages-p {
+		font-size: 14px;
+	}
+	
+	.messages-p.members {
+		max-width: 70px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.messages-p {
+		font-size: 12px;
+		padding: 0px 5px 0px 5px;
+	}
+	
+	.messages-p.members {
+		max-width: 90px;
+	}
+	
+	.messages-icons {
+		font-size: 20px;
+	}
+	
+	.messages-warning > p {
+		font-size: 12px;
+	}
+}
