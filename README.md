@@ -9,7 +9,7 @@ HTML, CSS, JavaScript, React (Hooks, Context API), MongoDB, Node.js (Express), W
 ## Key Functionalities:
 * Register/sign in to unique accounts.
 * Add other and remove users from a friends list.
-* Create group chats with multiple friends and send messages.
+* Create private group chats with multiple friends and send messages.
 * Group chats and messages are saved in a MongoDB database for future logins.
 * Group chats mimic real-time through the practice of short-polling.
 
