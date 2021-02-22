@@ -3,18 +3,18 @@
 ## You can try Small Talk right now to send messages with your friends and family:
 * https://smalltalk-jjs.herokuapp.com/
 
-## Software Used: 
-HTML, CSS, JavaScript, React (Hooks, Context API), MongoDB, Node.js (Express), WebSocket API (Socket.IO), JWT, bcrypt, Jest
+## Video demo (for best video quality, please select 720p):
+* https://youtu.be/Lid9BZy_-t0
 
 ## Key Functionalities:
 * Register/sign in to unique accounts.
 * Add other and remove users from a friends list.
 * Create private group chats with multiple friends and send messages.
+* Experience real-time messaging through WebSockets.
 * Group chats and messages are saved in a MongoDB database for future logins.
-* Group chats mimic real-time through the practice of short-polling.
 
-## Video demo (for best video quality, please select 720p):
-* https://youtu.be/Lid9BZy_-t0
+## Software Used: 
+HTML, CSS, JavaScript, React (Hooks, Context API), MongoDB, Node.js (Express), WebSocket API (Socket.IO), JWT, bcrypt, Jest
 
 ## Preparations before downloading and running the project:
 * Please set up a local or cloud (Atlas) MongoDB database if you haven't already.
