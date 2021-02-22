@@ -1,4 +1,4 @@
-# A group chat web application: Small Talk (2021)
+# A Real-Time Group Chat Web App: Small Talk (2021)
 
 ## You can try Small Talk right now to send messages with your friends and family:
 * https://smalltalk-jjs.herokuapp.com/
