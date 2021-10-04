@@ -23,11 +23,10 @@ HTML, CSS, JavaScript, React (Hooks, Context API), MongoDB, Node.js (Express), W
 
 ## To run the project, please follow these steps in sequence, carefully or the program will not work properly:
 1. Download the .zip file from this repository. Extract the .zip file and you will see two folders: "small_talk_frontend" and "small_talk_backend".
-2. On the command prompt/terminal, go to the "small_talk_frontend" directory and do the following steps:
-   * set an environment variable "NODE_ENV" to "development". Note: use command "set" for Windows or "export" for macOS. For example: >> set NODE_ENV=development.
-   * run "npm i" to install the dependencies. You can ignore the "vulnerabilities" in the terminal if you see any. Do not close this terminal.
+2. On the command prompt/terminal, go to the "small_talk_frontend" directory and run "npm i" to install the dependencies. You can ignore the "vulnerabilities" in the terminal if you see any. Do not close this terminal.
 3. Open a second terminal for the "small_talk_backend" directory and do the following steps:
    * set environment variables  "st_jwtprivatekey" to "st_key", and "st_db" to your MongoDB URI.
+   * Note: use command "set" for Windows or "export" for macOS. For example: >> set st_jwtprivatekey=st_key.
    * run "npm i" to install the dependencies. Do not close this or the previous terminal.
 4. Afterwards, in the "small_talk_frontend" terminal, run "npm start" to run the front-end website.
 5. Finally, in the "small_talk_backend" terminal, run "node server.js" to run the back-end server.
