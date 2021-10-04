@@ -1,6 +1,6 @@
 # A Real-Time Group Chat Web App: Small Talk (2021)
 
-## You can try Small Talk right now to send messages with your friends and family:
+## Live demo - you can try Small Talk right now to send messages with your friends and family:
 * https://smalltalk-jjs.herokuapp.com/
 
 ## Video demo (for best video quality, please select 720p):
@@ -23,14 +23,15 @@ HTML, CSS, JavaScript, React (Hooks, Context API), MongoDB, Node.js (Express), W
 
 ## To run the project, please follow these steps in sequence, carefully or the program will not work properly:
 1. Download the .zip file from this repository. Extract the .zip file and you will see two folders: "small_talk_frontend" and "small_talk_backend".
-1. On the command prompt/terminal, set environment variables "NODE_ENV" to "development", "st_jwtprivatekey" to "st_key", and "st_db" to your MongoDB URI.
-   * Note: use command "set" for Windows or "export" for macOS.
-   * For example: >> set NODE_ENV=development.
-1. Open a command terminal and go to the "small_talk_frontend" directory, then run "npm i" to install the dependencies. You can ignore the "vulnerabilities" in the terminal if you see any. Do not close this terminal.
-1. Open a second terminal for the "small_talk_backend" directory, then run "npm i" to install the dependencies. Do not close this or the previous terminal.
-1. Afterwards, in the "small_talk_frontend" terminal, run "npm start" to run the front-end website.
-1. Finally, in the "small_talk_backend" terminal, run "node server.js" to run the back-end server.
-1. To close the program on the terminals, simply close both terminals and the internet browser that is running the front-end.
+2. On the command prompt/terminal, go to the "small_talk_frontend" directory and do the following steps:
+   * set an environment variable "NODE_ENV" to "development". Note: use command "set" for Windows or "export" for macOS. For example: >> set NODE_ENV=development.
+   * run "npm i" to install the dependencies. You can ignore the "vulnerabilities" in the terminal if you see any. Do not close this terminal.
+3. Open a second terminal for the "small_talk_backend" directory and do the following steps:
+   * set environment variables  "st_jwtprivatekey" to "st_key", and "st_db" to your MongoDB URI.
+   * run "npm i" to install the dependencies. Do not close this or the previous terminal.
+4. Afterwards, in the "small_talk_frontend" terminal, run "npm start" to run the front-end website.
+5. Finally, in the "small_talk_backend" terminal, run "node server.js" to run the back-end server.
+6. To close the program on the terminals, simply close both terminals and the internet browser that is running the front-end.
 
 ## To run tests:
 1. On the terminal, set environment variables "NODE_ENV" to "test", "st_jwtprivatekey" to "st_key", and "st_db" to your MongoDB URI (a new database URI for testing is recommended).
