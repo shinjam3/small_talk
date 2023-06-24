@@ -4,7 +4,6 @@ import Header from './Header';
 import RenderConnectItems from './RenderConnectItems';
 
 function Connect() {
-  const { user } = useContext(UserContext);
   const [allUsers, setAllUsers] = useState([]);
   const [searchInput, setSearchInput] = useState('');
 

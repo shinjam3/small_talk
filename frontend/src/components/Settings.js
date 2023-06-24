@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { UserContext } from '../contexts/UserContext';
 import { SocketContext } from '../contexts/SocketContext';
 import { useNavigate } from 'react-router-dom';
 

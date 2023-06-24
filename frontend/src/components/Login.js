@@ -1,15 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
 import { UserContext } from '../contexts/UserContext';
-import { SocketContext } from '../contexts/SocketContext';
 
 import st_big from '../media/st_big.png';
 
 function Login() {
   const navigate = useNavigate();
   const { getLoggedIn } = useContext(UserContext);
-  const { createSocket } = useContext(SocketContext);
 
   const [loginErrorClass, setErrorClass] = useState('register-validation-error');
   const [loginInfo, setLoginInfo] = useState({
