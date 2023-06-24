@@ -1,0 +1,152 @@
+.notification-button {
+	padding: 0px 10px 0px 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.notification-request-button {
+	margin: 0px 5px 0px 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.no-notifications {
+	display: none;
+	margin-top: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.no-notifications.show {
+	display: block;
+}
+
+.notification-container {
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 50vw;
+	box-shadow: 0px 0px 10px 1px gray;
+}
+
+.notification-container.hide {
+	display: none;
+}
+
+.notifications-item-container {
+	position: relative;
+	height: 100px;
+	border: 1px solid gray;
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+}
+
+.notification-p {
+	margin: 0px 10px 0px 10px;
+}
+
+.notification-p.message {
+	width: 90%; 
+	white-space: nowrap; 
+  overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.notification-p.bold {
+	font-weight: bold;
+}
+
+.notification-half {
+	position: relative;
+	width: 75%;
+	height: 100%;
+}
+
+.notification-top {
+	width: 100%;
+	height: 50%;
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.notification-bottom {
+	width: 100%;
+	height: 50%;
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+}
+
+.notification-second-half {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@media only screen and (max-width: 1320px) {
+	.notification-container {
+		width: 60vw;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.notification-container {
+		width: 75vw;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.notification-container {
+		width: 90vw;
+	}
+}
+
+
+@media only screen and (max-width: 700px) {
+	.notification-p {
+		font-size: 14px;
+	}
+	
+	.notification-half {
+		width: 65%;
+	}
+
+	.notification-second-half {
+		width: 35%;
+	}
+	
+	.notification-button {
+		padding: 0px 5px 0px 5px;
+		font-size: 14px;
+	}
+
+	.notification-request-button {
+		margin: 0px 5px 0px 5px;
+		font-weight: bold;
+		font-size: 12px;
+	}
+
+}
+
+
+@media only screen and (max-width: 550px) {
+	.notification-container {
+		width: 95vw;
+	}
+	
+	.notification-half {
+		width: 75%;
+	}
+
+	.notification-second-half {
+		width: 25%;
+		flex-flow: row wrap;
+		padding: 20px 2px 20px 2px;
+	}
+}

@@ -1,0 +1,127 @@
+.group-settings-container {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	top: 50%; /* vertical alignment of fixed element -> top: 50% and transform: translateY(-50%) */
+	left: 50%; /* horizontal alignment of fixed element -> left: 50% and transform: translateX(-50%) */
+	transform: translate(-50%, -50%); /* both alignment of fixed element -> top: 50%; left: 50% and transform: translate(-50%, -50%) */
+	margin: auto;
+	width: 50vw;
+	background-color: cornsilk;
+	box-shadow: 0px 4px 8px 1px darkgray;
+}
+
+.group-settings-container.show {
+	display: block;
+}
+
+.group-settings-close {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: red;	
+	cursor: pointer;
+}
+
+.group-settings-close:hover {
+	background-color: firebrick;
+}
+
+.group-settings-close > p {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.group-settings-p {
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.group-settings-p:hover {
+	color: dodgerblue;
+}
+
+
+/* ITEM STYLES */
+.group-settings-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid gray;
+}
+
+.group-settings-top {
+	height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.group-settings-bottom {
+	opacity: 0;
+	max-height: 0px;
+	transition: 0.1s;
+}
+
+.group-settings-bottom.show-expand {
+	opacity: 1;
+	max-height: 300px;	
+	transition: 0.5s;
+}
+
+.group-settings-bottom > p {
+	margin: 0px 0px 10px 0px;
+	padding: 0;
+	font-size: 20px;
+}
+
+.group-settings-bottom > div > button {
+	font-size: 16px;
+	width: 75px; 
+	margin: 0px 10px 10px 10px;
+	cursor: pointer;
+}
+
+.group-settings-shrink {
+	margin: 0px 0px 10px 0px;
+	padding: 0;
+	font-size: 30px !important;
+	cursor: pointer;
+}
+
+/* .group-settings-shrink:hover {
+	color: dodgerblue;
+} */
+/* END MEMBERS ITEM STYLES */
+
+
+
+@media only screen and (max-width: 700px) {
+	.group-settings-container {
+		width: 70vw;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.group-settings-container {
+		width: 90vw;
+	}
+	
+	.group-settings-p {
+		cursor: pointer;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}

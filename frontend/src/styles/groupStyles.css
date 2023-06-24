@@ -1,0 +1,230 @@
+/* 
+top nav bar and footer must have flex: none;
+while the message container must have flex: auto;
+so the height can fill the remaining space of the flex container
+*/
+/* 
+As per this official article on Chrome web, the proper way to set 
+the height to fill the visible viewport is with height: 100%, either 
+on the <html> element or on a position: fixed element. As the document 
+describes, this ensures compatibility with mobile Safari and is 
+independent of how large the URL bar is.
+*/
+.group-container {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.group-nav {
+	height: 75px;
+	background-image: linear-gradient(black, #6600cc);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: none;
+}
+
+.group-nav-left-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.group-nav-back {
+	margin: 0px 20px 0px 20px;
+	color: white;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.group-nav-h1 {
+	max-width: 300px;
+	padding: 0px 20px 0px 20px;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+	white-space: nowrap; 
+  overflow: hidden;
+	text-overflow: ellipsis; 
+}
+
+.group-nav-add {
+	color: white;
+	margin-bottom: 5px;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.group-nav-settings-button {
+	font-size: 30px;
+	text-align: center;
+	margin: 0px 20px 0px 20px;
+	cursor: pointer;
+}
+
+
+.text-box-container {
+	height: 40px;
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	flex: auto;
+	margin-top: 10px;
+	overflow-y: scroll;
+	font-size: 16px;
+}
+
+.group-footer {
+	height: 100px;
+	background-color: silver;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 20px 0px 20px;
+	flex: none;
+}
+
+.group-textarea {
+	resize: none;
+	height: 50px;
+	font-size: 18px;
+}
+
+.group-send-button {
+	height: 55px;
+	font-size: 18px;
+}
+
+
+
+/* TEXT BOX STYLES */
+.text-box {
+	position: relative;
+	margin: 10px;
+	padding: 0px 10px 0px 10px;
+	width: 40vw;	
+}
+
+.text-box.received {
+	background-color: thistle;
+	border-radius: 10px 10px 10px 0px;
+}
+
+.text-box.sent {
+	margin-left: auto;
+	background-color: lightblue;
+	border-radius: 10px 10px 0px 10px;
+}
+
+.text-box-top {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.text-box-top > p {
+	font-weight: bold;
+}
+
+.text-box-body {
+	white-space: normal;
+	overflow: overlay;
+	word-wrap: break-word;
+}
+/* END TEXT BOX STYLES */
+
+
+
+/* FETCH ERROR STYLES */
+.group-fetch-error {
+	display: none;
+	z-index: 2;
+	position: fixed;
+	top: 50%; /* vertical alignment of fixed element -> top: 50% and transform: translateY(-50%) */
+	left: 50%; /* horizontal alignment of fixed element -> left: 50% and transform: translateX(-50%) */
+	transform: translate(-50%, -50%); /* both alignment of fixed element -> top: 50%; left: 50% and transform: translate(-50%, -50%) */
+	margin: auto;
+	padding: 10px;
+	width: 250px;
+	background-color: gray;
+	box-shadow: 0px 4px 8px 1px darkgray;
+	color: white;
+}
+
+.group-fetch-error.show {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.group-fetch-error > p {
+	text-align: center;
+	font-weight: bold;
+}
+
+.group-fetch-error > button {
+	border: none;
+  background-color: transparent;
+  outline: none;
+	font-size: 24px;
+	color: white;
+	cursor: pointer;
+}
+
+.group-fetch-error > button:hover {
+	color: purple;
+}
+/* END FETCH ERROR STYLES */
+
+
+@media only screen and (max-width: 600px) {
+	.group-nav-back {
+		margin: 0px 10px 0px 15px;
+		font-size: 24px;
+	}
+
+	.group-nav-h1 {
+		max-width: 150px;
+		font-size: 18px;
+		padding: 0px 5px 0px 5px;
+	}
+	
+	.group-nav-add {
+		font-size: 30px;
+		margin-left: 20px;
+	}
+	
+	.group-nav-settings-button {
+		font-size: 24px;
+		margin: 0px 15px 0px 15px;
+	}
+	
+	.text-box {
+		width: 80vw;
+	}
+	
+	.group-footer {
+		height: 80px;
+	}
+
+	.group-textarea {
+		height: 40px;
+		resize: none;
+		font-size: 16px;
+	}
+
+	.group-send-button {
+		height: 45px;
+		font-size: 16px;
+	}
+}
