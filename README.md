@@ -1,5 +1,7 @@
 # A Real-Time Group Chat Web App: Small Talk (2023)
 
+[![Small Talk Demo](http://img.youtube.com/vi/Lid9BZy_-t0/0.jpg)](http://www.youtube.com/watch?v=Lid9BZy_-t0 "Small Talk Demo")
+
 ## Video demo (for best video quality, please select 720p):
 
 - https://youtu.be/Lid9BZy_-t0
